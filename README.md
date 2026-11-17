@@ -1,2 +1,8 @@
 # GranuControl
-Exploring granularity specification on LLM systems
+Exploring granularity specification in LLM systems
+
+# Note
+Due to data privacy and course requirements,  we're not able to share the codebase. You can find the report and poster in this repository. If interested in any details, please feel free to reach out to me.
+
+# Abstract
+Large language models (LLMs) can answer at different levels of detail, but controlling this granularity remains difficult. Some applications require a concise overview, while others need a response with precise information. We study how reliably a model can follow an explicit granularity specification and compare two control methods: prompt engineering and parameter-efficient fine-tuningwith Low-Rank Adaptation (LoRA). Both methods are evaluated across several entity types and three predefined levels, from coarse to fine. We use GranuScore, a reference-freemeasure developed for text analysis and question answering, to quantify the granularity of each response. We also test whether the responses to each question preserve the requested ordering of the coarse, medium, and fine levels. Both methods reliably separate coarse from specific answers. LoRA gives the strongest results: it preserves a complete non-increasing sequence for 93.8% of questions, produces progressively longer responses, and maintains high accuracy at all three levels. Medium-fine responses often name the same central entity, with fine responses adding descriptive context. The adapters therefore control both referential abstraction and the amount of information provided. At the same time, the experiments show where the current granularity measure needs improvement.
